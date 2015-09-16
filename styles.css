@@ -1,0 +1,115 @@
+@import url(//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css);
+
+.center-block;
+{
+
+    left: 50%;
+    top:50%;
+}
+
+.detailBox {  
+    margin: 60px auto;
+    left: 0;
+    right: 0;
+    position: fixed;
+    float: left;
+    width:600px;
+    border:1px solid #bbb;
+    height: 450px; 
+}
+.titleBox {
+    background-color:#fdfdfd;
+    padding:10px;
+    height: 50px;
+}
+.titleBox label{
+  color:#444;
+  font-size: 30px;
+  margin:0;
+  display:inline-block;
+}
+html::before { 
+  content: " ";
+  position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: url(/project/bg.jpg) no-repeat center center fixed;
+            z-index: -1;
+            -webkit-filter: blur(5px);
+            -moz-filter: blur(5px);
+            -o-filter: blur(5px);
+            -ms-filter: blur(5px);
+            filter: blur(5px);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+}
+
+.commentBox {
+    padding:0px;
+    background: #000000;
+    border-top:1px dotted #bbb;
+    height: 200px;
+}
+
+
+.commentBox .form-group:first-child, .actionBox .form-group:first-child {
+    width:80%;
+}
+.commentBox .form-group:nth-child(2), .actionBox .form-group:nth-child(2) {
+    width:18%;
+}
+.actionBox .form-group * {
+    width:100%;
+}
+.taskDescription {
+    margin-top:10px 0;
+}
+.commentList {
+    padding:0;
+    list-style: none;
+    max-height:200px;
+    overflow:auto;
+}
+.commentList li {
+    width: 100%;
+    margin-top:20px;
+    margin-left: 0px;
+    float: left;
+    display: inline-block;
+}
+
+.commenterImage {
+    width:40px;
+    height:40px;
+    float:left;
+    display: inline-block;
+}
+.commenterImage img {
+    width:100%;
+    border-radius:50%;
+    margin: 0;
+
+}
+.commentText p {
+    margin-left:10px;
+    text-align: left;
+}
+.sub-text {
+    color:#aaa;
+    font-family:verdana;
+    font-size:11px;
+}
+.actionBox {
+    border-top:1px dotted #bbb;
+    padding:10px;
+    background-color:#fdfdfd;
+}
+#back
+{
+    float: right;
+    margin-bottom: 0px;
+}

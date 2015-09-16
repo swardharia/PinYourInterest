@@ -1,0 +1,6 @@
+setcookie("pi",'echo <script type="text/javascript"> document.getElementById("comment").value;</script>',time()+(30),"/");
+		 	$_COOKIE['pi']=''echo <script type="text/javascript"> document.getElementById("comment").value;</script>'';
+		 echo 'alert("cookie value: '.$_COOKIE["pi"].'");';
+
+
+		 

@@ -1,0 +1,82 @@
+INSERT into boards() VALUES ()
+
+DELETE from boards WHERE bid=
+
+UPDATE boards SET bboardid= WHERE bnum=
+
+-----
+get all pics from all boards of current user
+
+SELECT * FROM pics WHERE photoid in (select bitemid from boards where bboardid in (select boardid from userboard where userid = (select id from login where username='$usern')))
+
+
+------------
+get pics from board of followed user
+
+SELECT * FROM pics WHERE photoid in (select bitemid from boards where bboardid in (select boardid from userboard where userid = (select id from login where id in (select id2 from followinguser where id1='2'))))
+
+--------
+
+get pics from board num followed
+
+SELECT * FROM pics WHERE photoid in (select bitemid from boards where bboardid in (select bid from followingboard where idfollower='1'))
+
+-----------
+
+friend request accepted
+
+UPDATE friends SET confirm='1' WHERE id2=''
+
+-----------------
+
+friend request declined
+
+DELETE from friends WHERE confirm='2'
+
+------------------
+
+search pics using tags
+
+SELECT photo FROM pics WHERE photoid IN (SELECT picid FROM pictags WHERE tagid in (SELECT tagid FROM tags WHERE tagname LIKE "%sports%"))
+
+---------------
+
+select users using search bar
+
+SELECT * FROM user WHERE firstname LIKE "%swar%" OR lastname LIKE "%swar%"
+
+-----------------
+
+get all pics from board
+
+SELECT * FROM boards WHERE bboardid='1'
+
+get all path of pics
+
+SELECT photo FROM pics WHERE photoid IN (SELECT bitemid FROM boards WHERE bboardid='1')
+
+-------------------
+
+get all boards of user
+
+SELECT * FROM userboard WHERE userid='1'
+
+------------------
+
+get photo path for all pics on board
+
+SELECT photo FROM pics WHERE photoid IN (SELECT bitemid FROM boards WHERE bboardid IN (SELECT boardid FROM userboard WHERE userid='1'))
+
+-------------
+
+get pics of category 
+
+SELECT * FROM pics WHERE categoryid IN ( SELECT cid FROM categories where cname="sports")
+
+category user likes
+
+SELECT * FROM pics WHERE categoryid IN ( SELECT ccid FROM userlikescategory where cuserid='1')
+
+------------
+
+ALTER TABLE  AUTO_INCREMENT=
